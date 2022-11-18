@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/zhaohui.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <img src="../img/logo.jpg" class="one" alt="" />
+      <img src="../img/my.jpg" class="two" alt="" />
+      <img src="../img/xiazai.jpg" alt="" class="three" />
+    </header>
+    <nav>
+      <p>
+        <a href="../index.html">首页></a><a href="../denglu-zhuce/wd.html">我的></a>
+        <a href="../denglu-zhuce/denglu.html">登录</a>
+      </p>
+    </nav>
+    <div class="none">
+      <div class="int">
+        <input type="tell" id="tel" placeholder="请输入手机号码" /> <input type="button" id="btn" value="免费获取验证码" />
+      </div>
+      <div class="int">
+        <input type="password" id="pass" placeholder="请输入验证码" />
+      </div>
+    </div>
+    <div class="none">
+      <div class="int">
+        <input type="tell" id="tell" placeholder="请输入密码" />
+        
+      </div>
+      <div class="int">
+        <input type="text" id="text" placeholder="确认密码" />
+      </div>
+    </div>
+    <div class="q">
+    <button class="but">立即登录</button></div>
+  </body>
+</html>
+
+<script src="../js/login.js"></script>
+<script>
+  var wait=60;
+  function time(o) {
+   if (wait == 0) {
+    o.removeAttribute("disabled");  
+    o.value="免费获取验证码";
+    wait = 60;
+   } else { 
+   
+    o.setAttribute("disabled", true);
+    o.value="重新发送(" + wait + ")";
+    wait--;
+    setTimeout(function() {
+    time(o)
+    },
+    1000)
+   }
+   }
+  document.getElementById("btn").onclick=function(){time(this);}
+  
+  </script>
+
