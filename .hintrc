@@ -3,11 +3,11 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off",
-    "axe/language": [
+    "axe/text-alternatives": [
       "default",
       {
-        "html-has-lang": "off"
+        "image-alt": "off",
+        "frame-title": "off"
       }
     ],
     "axe/name-role-value": [
@@ -16,11 +16,19 @@
         "link-name": "off"
       }
     ],
-    "axe/text-alternatives": [
+    "meta-viewport": "off",
+    "axe/language": [
       "default",
       {
-        "image-alt": "off"
+        "html-has-lang": "off"
       }
-    ]
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "highest-available-document-mode": "off"
   }
 }
